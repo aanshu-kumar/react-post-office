@@ -4,7 +4,7 @@ import PostOffice from "./PostOffice";
 const PostOffice_page = ({ setData, data, pin }) => {
   const [post, setPost] = useState([...data.PostOffice]);
   function filterPost(filter) {
-    setPost(data.PostOffice.filter((item) => item.Name.includes(filter)));
+    setPost(data.PostOffice.filter((item) => item.Name.toLowerCase().includes(filter.toLowerCase())));
   }
   return (
     <div className="w-11/12 mx-auto my-10 flex flex-col gap-4">
